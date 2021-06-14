@@ -1,6 +1,11 @@
+    body {
+        width: 100%;
+    }
+    
     header {
         background-color: rgb(247, 46, 140);
         height: 100%;
+        width: 100%;
     }
     
     header img {
@@ -20,11 +25,44 @@
         font-weight: bold;
     }
     
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: crimson;
+    }
+    
+    main {
+        width: 100%;
+    }
+    
     main h1 {
         color: tomato;
         font-size: 40px;
         padding-top: 10px;
         font-family: Rockwell;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 30px;
+        margin-left: 10px;
+        font-size: 19px;
+    }
+    
+    table,
+    th,
+    td {
+        width: 50%;
+        border: 2px solid black;
+    }
+    
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
     }
     
     main div {
@@ -50,4 +88,5 @@
         text-align: center;
         font-size: 30px;
         background-color: rgb(247, 46, 140);
+        width: 100%;
     }
