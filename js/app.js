@@ -14,9 +14,8 @@ let seattleShop = {
     Total: 0,
     workHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     getNumberOfCookies: function() {
-        let workHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
         let sum = 0;
-        for (let i = 0; i < workHours.length; i++) {
+        for (let i = 0; i < this.workHours.length; i++) {
             let numOfCustomers = getRandomNumber(this.Min, this.Max);
             let soldCookies = Math.ceil(numOfCustomers * this.AvgCookie);
             this.totalCookiesSold[i] = soldCookies;
