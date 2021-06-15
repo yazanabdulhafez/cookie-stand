@@ -69,3 +69,20 @@ Instructions
 * Each cookie stand location should have a separate render() method that creates and appends its row to the table
 * The header row and footer row are each created in their own stand-alone function
 NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
+
+## Lab08b
+
+Continue working on the functionality of your sales.html page if you do not have it working 100% yet, including the row of totals across the bottom.
+
+Pat has provided you 7 additional images that they would like to see on the home page of the site. These images are located in your daily class GitHub repo: class-08/lab-b/assets/.
+
+Your public-facing index.html page should include the following:
+
+1. locations with addresses,
+2. hours open
+3. contact information
+4. Anything else you feel neccesary.
+5. A link to your sales.html page
+Be sure to also include a link to your index.html page on your sales.html pages as well.
+
+Feel free to make this information up. Get creative, have fun, but remember to be professional.

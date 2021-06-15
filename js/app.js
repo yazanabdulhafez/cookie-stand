@@ -11,62 +11,62 @@ let theHeaderPart = document.createElement('thead');
 salesTable.appendChild(theHeaderPart);
 
 function headerRender() {
-    let headeRow = document.createElement('tr');
-    theHeaderPart.appendChild(headeRow);
+  let headeRow = document.createElement('tr');
+  theHeaderPart.appendChild(headeRow);
 
-    let thBlank = document.createElement('th');
-    headeRow.appendChild(thBlank);
-    thBlank.textContent = 'Time & location';
+  let thBlank = document.createElement('th');
+  headeRow.appendChild(thBlank);
+  thBlank.textContent = 'Time & location';
 
-    for (let i = 0; i < workHours.length; i++) {
-        let tableHederElement = document.createElement('th');
-        headeRow.appendChild(tableHederElement);
-        tableHederElement.textContent = workHours[i];
-    }
-    let finalHeader = document.createElement('th');
-    headeRow.appendChild(finalHeader);
-    finalHeader.textContent = 'Daily Location Total ';
+  for (let i = 0; i < workHours.length; i++) {
+    let tableHederElement = document.createElement('th');
+    headeRow.appendChild(tableHederElement);
+    tableHederElement.textContent = workHours[i];
+  }
+  let finalHeader = document.createElement('th');
+  headeRow.appendChild(finalHeader);
+  finalHeader.textContent = 'Daily Location Total ';
 }
 
 
 
 function CookiesShop(region, Min, Max, AvgCookie) {
-    this.region = region;
-    this.Min = Min;
-    this.Max = Max;
-    this.AvgCookie = AvgCookie;
-    this.totalCookiesSold = [];
-    this.Total = 0;
+  this.region = region;
+  this.Min = Min;
+  this.Max = Max;
+  this.AvgCookie = AvgCookie;
+  this.totalCookiesSold = [];
+  this.Total = 0;
 }
 
 CookiesShop.prototype.getNumberOfCookies = function() {
-    for (let i = 0; i < workHours.length; i++) {
-        let numOfCustomers = getRandomNumber(this.Min, this.Max);
-        let soldCookies = Math.ceil(numOfCustomers * this.AvgCookie);
-        this.totalCookiesSold.push(soldCookies);
-        this.Total += this.totalCookiesSold[i];
-    }
+  for (let i = 0; i < workHours.length; i++) {
+    let numOfCustomers = getRandomNumber(this.Min, this.Max);
+    let soldCookies = Math.ceil(numOfCustomers * this.AvgCookie);
+    this.totalCookiesSold.push(soldCookies);
+    this.Total += this.totalCookiesSold[i];
+  }
 };
 //////////////the body of the table
 CookiesShop.prototype.render = function() {
-    let theBodyPart = document.createElement('tbody');
-    salesTable.appendChild(theBodyPart);
+  let theBodyPart = document.createElement('tbody');
+  salesTable.appendChild(theBodyPart);
 
-    let bodyRow = document.createElement('tr');
-    theBodyPart.appendChild(bodyRow);
+  let bodyRow = document.createElement('tr');
+  theBodyPart.appendChild(bodyRow);
 
 
+  let firstElement = document.createElement('td');
+  bodyRow.appendChild(firstElement);
+  firstElement.textContent = this.region;
+  for (let i = 0; i < workHours.length; i++) {
     let firstElement = document.createElement('td');
     bodyRow.appendChild(firstElement);
-    firstElement.textContent = this.region;
-    for (let i = 0; i < workHours.length; i++) {
-        let firstElement = document.createElement('td');
-        bodyRow.appendChild(firstElement);
-        firstElement.textContent = this.totalCookiesSold[i];
-    }
-    let lastElement = document.createElement('td');
-    bodyRow.appendChild(lastElement);
-    lastElement.textContent = this.Total;
+    firstElement.textContent = this.totalCookiesSold[i];
+  }
+  let lastElement = document.createElement('td');
+  bodyRow.appendChild(lastElement);
+  lastElement.textContent = this.Total;
 };
 /////////////////////make a new objects
 let seattleShop = new CookiesShop('Seattle', '23', '65', '6.3');
@@ -103,8 +103,8 @@ let mat5 = limaShop.totalCookiesSold;
 ///////////////the total sum for each column from the table
 limaShop.render();
 for (let i = 0; i < workHours.length; i++) {
-    sum[i] = mat1[i] + mat2[i] + mat3[i] + mat4[i] + mat5[i];
-    totalSum += Number(sum[i]);
+  sum[i] = mat1[i] + mat2[i] + mat3[i] + mat4[i] + mat5[i];
+  totalSum += Number(sum[i]);
 }
 footerRender();
 //console.log(sum);
@@ -112,28 +112,28 @@ footerRender();
 
 /////////////////////////the footer of table render function
 function footerRender() {
-    let theFooterPart = document.createElement('tfoot');
-    salesTable.appendChild(theFooterPart);
+  let theFooterPart = document.createElement('tfoot');
+  salesTable.appendChild(theFooterPart);
 
-    let footerRow = document.createElement('tr');
-    theFooterPart.appendChild(footerRow);
+  let footerRow = document.createElement('tr');
+  theFooterPart.appendChild(footerRow);
 
-    let firstElement = document.createElement('th');
-    footerRow.appendChild(firstElement);
-    firstElement.textContent = 'Totals';
-    for (let i = 0; i < workHours.length; i++) {
-        let tableHederElement = document.createElement('th');
-        footerRow.appendChild(tableHederElement);
-        tableHederElement.textContent = sum[i];
-    }
-    let finalElement = document.createElement('th');
-    footerRow.appendChild(finalElement);
-    finalElement.textContent = totalSum;
+  let firstElement = document.createElement('th');
+  footerRow.appendChild(firstElement);
+  firstElement.textContent = 'Totals';
+  for (let i = 0; i < workHours.length; i++) {
+    let tableHederElement = document.createElement('th');
+    footerRow.appendChild(tableHederElement);
+    tableHederElement.textContent = sum[i];
+  }
+  let finalElement = document.createElement('th');
+  footerRow.appendChild(finalElement);
+  finalElement.textContent = totalSum;
 }
 ////////////////////////The random number function:
 function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 //////////////////////////////////end
