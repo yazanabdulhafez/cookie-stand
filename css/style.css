@@ -1,25 +1,25 @@
-   .sales {
+     .sales {
        background-color: #FFD8CC;
        width: 100%;
        margin-top: 10px;
-   }
-   
-   header {
+     }
+     
+     header {
        background-color: rgb(247, 46, 140);
        height: 100%;
        width: 100%;
-   }
-   
-   header img {
+     }
+     
+     header img {
        width: 40%;
-   }
-   
-   header nav {
+     }
+     
+     header nav {
        float: right;
        padding-top: 55px;
-   }
-   
-   header nav ul li {
+     }
+     
+     header nav ul li {
        display: inline-block;
        padding: 10px;
        font-size: 30px;
@@ -27,67 +27,85 @@
        font-weight: bold;
        align-items: center;
        border: solid;
-   }
-   
-   a {
+     }
+     
+     a {
        text-decoration: none;
-   }
-   
-   a:hover {
+     }
+     
+     a:hover {
        text-decoration: none;
        color: crimson;
-   }
-   
-   main {
+     }
+     
+     main {
        width: 100%;
        height: 100%;
-   }
-   
-   main h1 {
+     }
+     
+     main h1 {
        color: tomato;
        font-size: 40px;
        padding-top: 10px;
        font-family: Rockwell;
-   }
-   
-   table {
+     }
+     
+     table {
        border-collapse: collapse;
        border-spacing: 30px;
        margin-left: 10px;
        font-size: 19px;
-   }
-   
-   table,
-   th,
-   td {
+     }
+     
+     table,
+     th,
+     td {
        width: 50%;
        border: 2px solid black;
-   }
-   
-   th,
-   td {
+     }
+     
+     th,
+     td {
        padding: 10px;
        text-align: left;
-   }
-   
-   main div {
+     }
+     
+     main div {
        padding-top: 10px;
-   }
-   
-   main p {
+     }
+     
+     main p {
        padding-top: 10px;
        font-size: 20px;
        color: tomato;
        font-family: Rockwell;
-   }
-   
-   main ul {
+     }
+     
+     main ul {
        list-style: disc;
        padding-top: 10px;
        padding-left: 30px;
-   }
-   
-   footer {
+     }
+     
+     fieldset {
+       height: 100px;
+       background-color: #eeeeee;
+       margin-top: 30px;
+       color: blueviolet;
+       font-size: 20px;
+     }
+     
+     legend {
+       background-color: gray;
+       color: white;
+       padding: 5px 10px;
+     }
+     
+     input {
+       margin: 10px;
+     }
+     
+     footer {
        position: absolute;
        margin-top: 10px;
        height: 100px;
@@ -97,4 +115,4 @@
        width: 100%;
        justify-content: center;
        align-items: center;
-   }
+     }
