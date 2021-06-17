@@ -2,6 +2,7 @@
 let workHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
 CookiesShop.allCookies = [];
 /////Render function for header of the table
+let changeTheme = document.getElementById('switch');
 let salmonCookies = document.getElementById('salmonCookies');
 let shopForm = document.getElementById('shopForm');
 
@@ -43,7 +44,7 @@ function CookiesShop(region, Min, Max, AvgCookie) {
 
 }
 
-/////////////////////////////////////////////
+////////////////////////////////////////////get the number of cookies per hour
 CookiesShop.prototype.getNumberOfCookies = function() {
   for (let i = 0; i < workHours.length; i++) {
     let numOfCustomers = getRandomNumber(this.Min, this.Max);
@@ -169,5 +170,30 @@ function formSubmission(event) {
 }
 
 shopForm.addEventListener('submit', formSubmission);
+////////////////////change theme functions
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
 
-//////END
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-light');
+  } else {
+    setTheme('theme-dark');
+  }
+}
+
+// Immediately invoked function to set the theme on initial load
+(function() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-dark');
+    document.getElementById('slider').checked = false;
+  } else {
+    setTheme('theme-light');
+    document.getElementById('slider').checked = true;
+  }
+})();
+//////END///////
