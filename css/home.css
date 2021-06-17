@@ -1,41 +1,41 @@
-html {
+  html {
     box-sizing: border-box;
     font-size: 20px;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: xx-large;
-}
-
-body {
+  }
+  
+  body {
     font-family: "Nunito", sans-serif;
     color: rgb(0, 0, 0);
     font-weight: bold;
     line-height: 1.6;
     background-color: #FFD8CC;
-}
-
-.container {
+  }
+  
+  .container {
     width: 100%;
     margin: 2rem auto;
-}
-
-.gallery {
+  }
+  
+  .gallery {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(14, 5vw);
     grid-gap: 10px;
-}
-
-.gallery__img {
+  }
+  
+  .gallery__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     border: solid red;
-}
-
-.gallery__item--1 {
+  }
+  
+  .gallery__item--1 {
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 1;
@@ -43,9 +43,9 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 1 / span 2;  */
     /* grid-row: 1 / span 2; */
-}
-
-.gallery__item--2 {
+  }
+  
+  .gallery__item--2 {
     grid-column-start: 8;
     grid-column-end: 12;
     grid-row-start: 1;
@@ -53,9 +53,9 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 3 / span 2;  */
     /* grid-row: 1 / span 2; */
-}
-
-.gallery__item--3 {
+  }
+  
+  .gallery__item--3 {
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 5;
@@ -63,9 +63,9 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 5 / span 4;
   grid-row: 1 / span 5; */
-}
-
-.gallery__item--4 {
+  }
+  
+  .gallery__item--4 {
     grid-column-start: 6;
     grid-column-end: 12;
     grid-row-start: 5;
@@ -73,9 +73,9 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 1 / span 4;  */
     /* grid-row: 3 / span 3; */
-}
-
-.gallery__item--5 {
+  }
+  
+  .gallery__item--5 {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 11;
@@ -83,9 +83,9 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 1 / span 4; */
     /* grid-row: 6 / span 3; */
-}
-
-.gallery__item--6 {
+  }
+  
+  .gallery__item--6 {
     grid-column-start: 5;
     grid-column-end: 12;
     grid-row-start: 11;
@@ -93,4 +93,31 @@ body {
     /** Alternative Syntax **/
     /* grid-column: 5 / span 4; */
     /* grid-row: 6 / span 3; */
-}
+  }
+  /*/////about us///////////*/
+  
+  .headers {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    gap: 10px;
+  }
+  
+  .headers div:nth-child(2) p {
+    font-size: 35px;
+    padding-top: 0px;
+  }
+  
+  .aboutus {
+    margin-left: 10px;
+  }
+  
+  .aboutus p {
+    text-indent: 50px;
+    padding-top: 20px;
+  }
+  
+  .aboutus p::first-letter {
+    font-size: 200%;
+    color: tomato;
+  }
