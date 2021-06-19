@@ -1,0 +1,42 @@
+:root {
+  --light: #ffffff;
+  --sky: #6a8df6;
+  --purple: #c31985;
+  --dark: #33353b;
+}
+
+header .theme-switches {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header .switch {
+  border: 2px solid black;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+header .switch:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+header .theme-switches #switch-1 {
+  background-color: var(--light);
+}
+
+header .theme-switches #switch-2 {
+  background-color: var(--sky);
+}
+
+header .theme-switches #switch-3 {
+  background-color: var(--purple);
+}
+
+header .theme-switches #switch-4 {
+  background-color: var(--dark);
+}

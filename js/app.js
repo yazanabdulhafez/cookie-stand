@@ -2,7 +2,6 @@
 let workHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
 CookiesShop.allCookies = [];
 /////Render function for header of the table
-let changeTheme = document.getElementById('switch');
 let salmonCookies = document.getElementById('salmonCookies');
 let shopForm = document.getElementById('shopForm');
 
@@ -150,7 +149,6 @@ function getRandomNumber(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
-///////////////////
 /////////////////form function//////////////////////////////
 function formSubmission(event) {
   event.preventDefault();
@@ -170,30 +168,5 @@ function formSubmission(event) {
 }
 
 shopForm.addEventListener('submit', formSubmission);
-////////////////////change theme functions
-// function to set a given theme/color-scheme
-function setTheme(themeName) {
-  localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
-}
 
-// function to toggle between light and dark theme
-function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-light');
-  } else {
-    setTheme('theme-dark');
-  }
-}
-
-// Immediately invoked function to set the theme on initial load
-(function() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-dark');
-    document.getElementById('slider').checked = false;
-  } else {
-    setTheme('theme-light');
-    document.getElementById('slider').checked = true;
-  }
-})();
 //////END///////
