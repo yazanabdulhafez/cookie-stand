@@ -1,249 +1,299 @@
-     .sales {
-       background-color: #FFD8CC;
-       width: 100%;
-       margin-top: 10px;
-     }
-     
-     header {
-       background-color: rgb(247, 46, 140);
-       height: 100%;
-       width: 100%;
-     }
-     
-     header img {
-       width: 40%;
-     }
-     
-     header nav {
-       float: right;
-       padding-top: 55px;
-     }
-     
-     header nav ul li {
-       display: inline-block;
-       padding: 10px;
-       font-size: 30px;
-       font-family: fantasy;
-       font-weight: bold;
-       align-items: center;
-       border: solid 2px;
-       border-radius: 20px;
-       color: blueviolet;
-     }
-     
-     a {
-       text-decoration: none;
-     }
-     
-     a:hover {
-       text-decoration: none;
-       color: crimson;
-     }
-     
-     main {
-       width: 100%;
-       height: 100%;
-     }
-     
-     main h1 {
-       color: tomato;
-       font-size: 40px;
-       padding-top: 10px;
-       font-family: Rockwell;
-     }
-     
-     table {
-       border-collapse: collapse;
-       border-spacing: 30px;
-       margin-left: 10px;
-       font-size: 19px;
-       -webkit-box-shadow: 0px 0px 3px 5px, rgb(238, 15, 15);
-       -moz-box-shadow: 0px 0px 3px 5px rgb(238, 15, 15);
-       box-shadow: 0px 0px 3px 5px rgb(238, 15, 15);
-       filter: progid: DXImageTransform.Microsoft.Glow(color='white', Strength='7')
-     }
-     
-     table,
-     th,
-     td {
-       width: 50%;
-       border: 2px solid black;
-     }
-     
-     th,
-     td {
-       padding: 10px;
-       text-align: left;
-     }
-     
-     main div {
-       padding-top: 10px;
-     }
-     
-     main p {
-       padding-top: 10px;
-       font-size: 20px;
-       color: tomato;
-       font-family: Rockwell;
-     }
-     
-     main ul {
-       list-style: disc;
-       padding-top: 10px;
-       padding-left: 30px;
-     }
-     
-     fieldset {
-       height: 350px;
-       background-color: #f35858;
-       margin-top: 30px;
-       margin-left: 30%;
-       color: blueviolet;
-       font-size: 20px;
-       border-radius: 50px;
-       width: 40%;
-       border: solid 2px;
-       display: block;
-       margin: 1.0em auto;
-       text-align: center;
-     }
-     
-     legend {
-       background-color: rgb(241, 198, 99);
-       color: rgb(62, 17, 228);
-       padding: 10px 10px;
-       border-radius: 25px;
-       border: solid 2px;
-     }
-     
-     input {
-       margin: 15px 15px 30px 30px;
-       border-radius: 25px;
-     }
-     
-     button {
-       border-radius: 10px;
-       width: 150px;
-     }
-     /*///////////togel the theme/////////////*/
-     
-     .theme-light {
-       --color-primary: #0060df;
-       --color-secondary: #fbfbfe;
-       --color-accent: #fd6f53;
-       --font-color: #000000;
-     }
-     
-     .theme-dark {
-       --color-primary: #17ed90;
-       --color-secondary: #2a2c2d;
-       --color-accent: #12cdea;
-       --font-color: #ffffff;
-     }
-     
-     .container {
-       display: flex;
-       width: 100%;
-       height: 100%;
-       background: var(--color-secondary);
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-     }
-     
-     .container h1 {
-       color: var(--font-color);
-       font-family: sans-serif;
-     }
-     
-     .container button {
-       color: var(--font-color);
-       background: var(--color-primary);
-       padding: 10px 20px;
-       border: 0;
-       border-radius: 5px;
-     }
-     /* The switch - the box around the slider */
-     
-     .switch {
-       position: relative;
-       display: inline-block;
-       width: 60px;
-       height: 34px;
-     }
-     /* Hide default HTML checkbox */
-     
-     .switch input {
-       opacity: 0;
-       width: 0;
-       height: 0;
-     }
-     /* The slider */
-     
-     .slider {
-       position: absolute;
-       cursor: pointer;
-       top: 0;
-       left: 0;
-       right: 0;
-       bottom: 0;
-       background-color: #ccc;
-       -webkit-transition: 0.4s;
-       transition: 0.4s;
-     }
-     
-     .slider:before {
-       position: absolute;
-       content: "";
-       height: 40px;
-       width: 40px;
-       left: 0px;
-       bottom: 4px;
-       top: 0;
-       bottom: 0;
-       margin: auto 0;
-       -webkit-transition: 0.4s;
-       transition: 0.4s;
-       box-shadow: 0 0px 15px #2020203d;
-       background: white url('https://i.ibb.co/FxzBYR9/night.png');
-       background-repeat: no-repeat;
-       background-position: center;
-     }
-     
-     input:checked+.slider {
-       background-color: #2196f3;
-     }
-     
-     input:focus+.slider {
-       box-shadow: 0 0 1px #2196f3;
-     }
-     
-     input:checked+.slider:before {
-       -webkit-transform: translateX(24px);
-       -ms-transform: translateX(24px);
-       transform: translateX(24px);
-       background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
-       background-repeat: no-repeat;
-       background-position: center;
-     }
-     /* Rounded sliders */
-     
-     .slider.round {
-       border-radius: 34px;
-     }
-     
-     .slider.round:before {
-       border-radius: 50%;
-     }
-     
-     footer {
-       position: absolute;
-       margin-top: 10px;
-       height: 100px;
-       display: flex;
-       font-size: 30px;
-       background-color: rgb(247, 46, 140);
-       width: 100%;
-       justify-content: center;
-       align-items: center;
-     }
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Staatliches&display=swap');
+html {
+  box-sizing: border-box;
+}
+
+
+/*///////////////////// body part for home page ///////////////////*/
+
+h2 {
+  font-size: xx-large;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.6;
+  background-color: #FFD8CC;
+  width: 100%;
+}
+
+.containers {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(14, 5vw);
+  grid-gap: 10px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: solid rgb(180, 35, 238);
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--2 {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 11;
+}
+
+.gallery__item--4 {
+  grid-column-start: 6;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 11;
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 15;
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 11;
+  grid-row-end: 15;
+}
+
+.headers {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  gap: 10px;
+}
+
+.headers div:nth-child(2) p {
+  font-family: 'Lobster';
+  font-size: 40px;
+  padding-top: 0px;
+  color: #DA0037;
+  line-height: 2.4;
+}
+
+.aboutus {
+  margin-left: 10px;
+  color: #DA0037;
+}
+
+.aboutus p {
+  text-indent: 50px;
+  padding-top: 20px;
+  color: #DA0037;
+}
+
+.aboutus p::first-letter {
+  font-size: 200%;
+  color: #DA0037;
+}
+
+header {
+  background-color: #FFBD9B;
+  height: 100%;
+  width: 100%;
+  border: dotted brown 2px;
+}
+
+header img {
+  width: 40%;
+}
+
+header nav {
+  float: right;
+  padding-top: 55px;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: bold;
+  align-items: center;
+  border: solid 2px;
+  border-radius: 20px;
+  color: blueviolet;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: crimson;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  border: dotted 2px;
+}
+
+h1 {
+  color: tomato;
+  font-size: 40px;
+  padding-top: 10px;
+  font-family: Rockwell;
+  display: flex;
+  justify-content: center;
+}
+
+main div {
+  padding-top: 10px;
+}
+
+main p {
+  padding-top: 10px;
+  font-size: 20px;
+  color: tomato;
+  font-family: Rockwell;
+}
+
+main ul {
+  list-style: disc;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+
+/*///////////////////// body part for sales page ///////////////////*/
+
+.salesbody {
+  font-family: "Nunito", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.sales {
+  background-color: rgb(241, 166, 115);
+  margin-top: 2px;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 30px;
+  margin-left: 14px;
+  font-size: 16.5px;
+  -webkit-box-shadow: 0px 0px 3px 5px, rgb(238, 15, 15);
+  -moz-box-shadow: 0px 0px 3px 5px rgb(238, 15, 15);
+  box-shadow: 0px 0px 3px 5px rgb(238, 15, 15);
+  filter: progid: DXImageTransform.Microsoft.Glow(color='white', Strength='7')
+}
+
+table,
+th,
+td {
+  width: 50%;
+  border: 2px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.sales div {
+  padding-bottom: 10px;
+}
+
+fieldset {
+  height: 350px;
+  background-color: #f35858;
+  margin-top: 30px;
+  margin-left: 30%;
+  color: blueviolet;
+  font-size: 20px;
+  border-radius: 50px;
+  width: 40%;
+  border: solid 2px;
+  display: block;
+  margin: 1.0em auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+legend {
+  background-color: rgb(241, 198, 99);
+  color: rgb(62, 17, 228);
+  padding: 10px 10px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+input {
+  margin: 15px 15px 30px 30px;
+  border-radius: 25px;
+}
+
+button {
+  border-radius: 10px;
+  width: 150px;
+}
+
+
+/*/////////////////////footer part///////////////////*/
+
+footer {
+  position: absolute;
+  margin-top: 2px;
+  height: 100px;
+  display: flex;
+  font-size: 25px;
+  background-color: #FFBD9B;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: crimson dotted 2px;
+}
+
+
+/*////////////////// glow part /////////////////////*/
+
+.glow {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+/*/////////////////////THE END ///////////////////*/
