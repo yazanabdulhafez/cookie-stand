@@ -114,6 +114,9 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #FFBD9B;
   height: 100%;
   width: 100%;
@@ -125,8 +128,8 @@ header img {
 }
 
 header nav {
-  float: right;
-  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
 }
 
 header nav ul li {
@@ -171,7 +174,7 @@ main div {
 
 main p {
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: tomato;
   font-family: Rockwell;
 }
